@@ -45,6 +45,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import com.appleroid.core.designsystem.component.CheckTextField
 import com.appleroid.core.designsystem.component.DescriptionText
 import com.appleroid.core.designsystem.component.LabelBtn
@@ -78,6 +80,7 @@ import kotlinx.coroutines.launch
 fun JoinRoute(
     modifier: Modifier = Modifier,
     joinCompleteClicked: () -> Unit,
+    viewModel: JoinViewModel = hiltViewModel()
 ) {
     JoinScreen(
         modifier = modifier,
