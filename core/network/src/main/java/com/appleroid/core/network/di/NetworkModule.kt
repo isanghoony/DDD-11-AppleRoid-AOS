@@ -1,5 +1,6 @@
 package com.appleroid.core.network.di
 
+import com.appleroid.core.network.api.JoinApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -10,6 +11,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
+import retrofit2.create
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
@@ -44,4 +46,8 @@ object NetworkModule {
             .addConverterFactory(converterFactory)
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideStatusApiService(retrofit: Retrofit): JoinApi = retrofit.create()
 }
