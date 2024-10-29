@@ -1,7 +1,8 @@
 package com.appleroid.core.network.model.join
 
 data class JoinCodeRequest (
-    val zXc: String,
-    val zxC: Int,
-    val zxcV: String
+    val status: String,
+    val statusCode: Int,
+    val message: String,
+    val data: String
 )

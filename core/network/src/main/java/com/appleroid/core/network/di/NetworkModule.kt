@@ -42,7 +42,7 @@ object NetworkModule {
     ): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://api.example.com")
+            .baseUrl("http://localhost:3000")
             .addConverterFactory(converterFactory)
             .build()
     }
